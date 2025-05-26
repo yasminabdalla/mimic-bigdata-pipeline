@@ -1,0 +1,34 @@
+CREATE EXTERNAL TABLE ADMISSIONS (
+    row_id BIGINT,
+    subject_id BIGINT,
+    hadm_id BIGINT,
+    admittime TIMESTAMP,
+    dischtime TIMESTAMP,
+    deathtime TIMESTAMP,
+    admission_type STRING,  
+    admission_location STRING,
+    discharge_location STRING,
+    insurance STRING,
+    language STRING,
+    religion STRING,
+    marital_status STRING,
+    ethnicity STRING,
+    edregtime TIMESTAMP,
+    edouttime TIMESTAMP,
+    diagnosis STRING,
+    hospital_expire_flag BOOLEAN,
+    has_chartevents_data BOOLEAN,
+    los_days_int BIGINT,
+    died_in_hospital BOOLEAN,
+    admit_date TIMESTAMP,
+    discharge_date TIMESTAMP
+)
+STORED AS PARQUET
+LOCATION '/user/hive/warehouse/admission_data/'
+TBLPROPERTIES (
+  'parquet.compress'='SNAPPY',
+  'parquet.validation'='STRICT'
+);
+
+
+DESCRIBE FORMATTED ADMISSIONS;

@@ -1,0 +1,17 @@
+CREATE EXTERNAL TABLE ICUSTAYS (
+    row_id BIGINT,
+    subject_id BIGINT,
+    hadm_id BIGINT,
+    icustay_id BIGINT,
+    intime TIMESTAMP,
+    outtime TIMESTAMP,
+    los_hours BIGINT
+)
+STORED AS PARQUET
+LOCATION '/user/hive/warehouse/icustays_data/'
+TBLPROPERTIES (
+  'parquet.compress'='SNAPPY',
+  'parquet.validation'='STRICT'
+);
+
+DESCRIBE FORMATTED ICUSTAYS;

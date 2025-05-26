@@ -1,0 +1,16 @@
+CREATE EXTERNAL TABLE diagnoses_icd (
+    row_id BIGINT,
+    subject_id BIGINT,
+    hadm_id BIGINT,
+    seq_num BIGINT,
+    icd9_code STRING
+)
+STORED AS PARQUET
+LOCATION '/user/hive/warehouse/diagnoses_data/'
+TBLPROPERTIES (
+    'parquet.compress'='SNAPPY',
+    'parquet.validation'='STRICT'
+);
+
+
+DESCRIBE FORMATTED diagnoses_icd ;

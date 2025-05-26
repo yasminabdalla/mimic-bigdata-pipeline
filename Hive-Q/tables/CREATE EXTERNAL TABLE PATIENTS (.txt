@@ -1,0 +1,16 @@
+CREATE EXTERNAL TABLE PATIENTS (
+  row_id BIGINT,
+  subject_id BIGINT,
+  gender STRING,
+  dob TIMESTAMP,
+  dod TIMESTAMP,
+  dod_hosp TIMESTAMP,
+  dod_ssn TIMESTAMP,
+  expire_flag INT
+)
+STORED AS PARQUET
+LOCATION '/user/hive/warehouse/patients_data/'
+TBLPROPERTIES (
+  'parquet.compress'='SNAPPY',
+  'parquet.validation'='STRICT'
+);
