@@ -1,6 +1,13 @@
 🏥 MIMIC-III Big Data Pipeline for Healthcare Analytics
 This project implements a scalable Big Data pipeline to process and analyze the MIMIC-III clinical dataset. Leveraging technologies like Hadoop, Hive, Spark, and Docker, the pipeline facilitates efficient extraction, transformation, and loading (ETL) of large-scale healthcare data, enabling insightful analytics on patient information.
 
+## MIMIC-III Big Data Pipeline
+
+The diagram below illustrates the architecture of the big data pipeline built for the MIMIC-III dataset:
+
+![MIMIC-III Pipeline](mimic_pipeline.png)
+
+
 🎯 Objectives:
 
 Establish a robust ETL pipeline for the MIMIC-III dataset.
