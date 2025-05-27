@@ -127,9 +127,8 @@ Execute the Job:
   hdfs dfs -cat /user/hadoop/output_avg_age/part-r-00000
 ```
 
+## project workflow
 ```
--------projectworkflow---------
-
 +-----------------------------+
 |  MIMIC-III Clinical Dataset |
 |     (CSV Files / Demo)     |
