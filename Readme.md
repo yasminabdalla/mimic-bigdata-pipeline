@@ -24,6 +24,7 @@ Java MapReduce: Programming model for processing large data sets.
 Python: Data preprocessing and transformation.
 
 📁 Project Structure
+```
 .
 ├── data/                      # Raw and processed data files
 ├── hive/                      # Hive scripts and queries
@@ -34,7 +35,7 @@ Python: Data preprocessing and transformation.
 ├── docs/                      # Project documentation
 │   └── documentation.docx
 └── README.md                  # Project overview and instructions
-
+```
 🗃️ Dataset: MIMIC-III
 Source: https://physionet.org/content/mimiciii-demo/1.4/
 
@@ -43,27 +44,27 @@ Description: MIMIC-III is a large, publicly available database comprising de-ide
 ⚙️ Setup Instructions:
 
 1- Clone the Repository
-
+```
 git clone https://github.com/Marcel-Jan/docker-hadoop-spark
-
+```
 2- Launch the Docker Environment
-
+```
 docker-compose up -d
-
+```
 3- Converting Data to Big Data Formats
 
 Storing large datasets as raw CSV files is inefficient for distributed systems due to their size and lack of schema enforcement. Converting the extracted and cleaned MIMIC-III data into columnar, compressed formats like Parquet or Avro drastically improves storage efficiency and query performance
 
 4- Load Data into HDFS
-
+```
 docker exec -it namenode bash
 hdfs dfs -mkdir -p /user/hadoop/mimic/patients
 hdfs dfs -put /path/to/patients.csv /user/hadoop/mimic/patients
-
+```
 5- Hive Table Creation
 
 example :
-
+```
 CREATE EXTERNAL TABLE patients (
   subject_id BIGINT,
   gender STRING,
@@ -71,15 +72,15 @@ CREATE EXTERNAL TABLE patients (
 )
 STORED AS PARQUET
 LOCATION '/user/hadoop/mimic/patients';
-
+```
 6- Apply Analytical Queries
 
 Average Length of Stay by Diagnosis:
-
+```
   SELECT diagnosis, AVG(los_days_int) AS avg_los
   FROM admissions
   GROUP BY diagnosis;
-
+```
 🧱 Data Model Overview
 ```
 PATIENTS
@@ -104,6 +105,7 @@ DIAGNOSES_ICD
 ```
 
 7-Java MapReduce Job (Average Age Calculation)
+```
 cd mapreduce/
   chmod +x build.sh
   ./build.sh
@@ -116,7 +118,7 @@ Execute the Job:
   hdfs dfs -put /root/patients.csv /user/hadoop/input/
   hadoop jar /root/AvgAge.jar AvgAge /user/hadoop/input /user/hadoop/output_avg_age
   hdfs dfs -cat /user/hadoop/output_avg_age/part-r-00000
-
+```
 -------projectworkflow---------
 ```
 +-----------------------------+
