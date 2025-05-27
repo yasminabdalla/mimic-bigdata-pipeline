@@ -1,7 +1,8 @@
 🏥 MIMIC-III Big Data Pipeline for Healthcare Analytics
 This project implements a scalable Big Data pipeline to process and analyze the MIMIC-III clinical dataset. Leveraging technologies like Hadoop, Hive, Spark, and Docker, the pipeline facilitates efficient extraction, transformation, and loading (ETL) of large-scale healthcare data, enabling insightful analytics on patient information.
 
-🎯 Objectives
+🎯 Objectives:
+
 Establish a robust ETL pipeline for the MIMIC-III dataset.
 
 Utilize distributed storage and processing frameworks for handling large datasets.
@@ -10,7 +11,8 @@ Perform analytical queries to derive meaningful healthcare insights.
 
 Ensure reproducibility and scalability through containerized environments.
 
-🛠️ Technologies Used
+🛠️ Technologies Used:
+
 Docker & Docker Compose: Containerization and orchestration of services.
 
 Hadoop (HDFS): Distributed storage system for large datasets.
@@ -38,7 +40,8 @@ Source: https://physionet.org/content/mimiciii-demo/1.4/
 
 Description: MIMIC-III is a large, publicly available database comprising de-identified health-related data associated with over forty thousand patients who stayed in critical care units of the Beth Israel Deaconess Medical Center between 2001 and 2012.
 
-⚙️ Setup Instructions
+⚙️ Setup Instructions:
+
 1- Clone the Repository
 
 git clone https://github.com/Marcel-Jan/docker-hadoop-spark
@@ -114,7 +117,7 @@ Execute the Job:
   hdfs dfs -cat /user/hadoop/output_avg_age/part-r-00000
 
 -------projectworkflow---------
-
+```
 +-----------------------------+
 |  MIMIC-III Clinical Dataset |
 |     (CSV Files / Demo)     |
@@ -146,6 +149,7 @@ Execute the Job:
 |                  Query Results & Analytics                   |
 |     (e.g. Avg LOS, ICU readmissions, Mortality rates)        |
 +--------------------------------------------------------------+
+```
 
 📄 Documentation
 Detailed documentation, including data dictionaries, processing steps, and architectural diagrams, is available in the docs/ directory:
