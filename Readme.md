@@ -126,8 +126,10 @@ Execute the Job:
   hadoop jar /root/AvgAge.jar AvgAge /user/hadoop/input /user/hadoop/output_avg_age
   hdfs dfs -cat /user/hadoop/output_avg_age/part-r-00000
 ```
--------projectworkflow---------
+
 ```
+-------projectworkflow---------
+
 +-----------------------------+
 |  MIMIC-III Clinical Dataset |
 |     (CSV Files / Demo)     |
