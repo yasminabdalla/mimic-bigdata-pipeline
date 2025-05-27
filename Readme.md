@@ -1,4 +1,4 @@
-🏥 MIMIC-III Big Data Pipeline for Healthcare Analytics
+## 🏥 MIMIC-III Big Data Pipeline for Healthcare Analytics
 This project implements a scalable Big Data pipeline to process and analyze the MIMIC-III clinical dataset. Leveraging technologies like Hadoop, Hive, Spark, and Docker, the pipeline facilitates efficient extraction, transformation, and loading (ETL) of large-scale healthcare data, enabling insightful analytics on patient information.
 
 ## MIMIC-III Big Data Pipeline
@@ -8,7 +8,7 @@ The diagram below illustrates the architecture of the big data pipeline built fo
 ![MIMIC-III Pipeline](mimic_pipeline.png)
 
 
-🎯 Objectives:
+## 🎯 Objectives:
 
 Establish a robust ETL pipeline for the MIMIC-III dataset.
 
@@ -18,7 +18,7 @@ Perform analytical queries to derive meaningful healthcare insights.
 
 Ensure reproducibility and scalability through containerized environments.
 
-🛠️ Technologies Used:
+## 🛠️ Technologies Used:
 
 Docker & Docker Compose: Containerization and orchestration of services.
 
@@ -30,7 +30,7 @@ Java MapReduce: Programming model for processing large data sets.
 
 Python: Data preprocessing and transformation.
 
-📁 Project Structure
+## 📁 Project Structure
 ```
 .
 ├── data/                      # Raw and processed data files
@@ -43,12 +43,12 @@ Python: Data preprocessing and transformation.
 │   └── documentation.docx
 └── README.md                  # Project overview and instructions
 ```
-🗃️ Dataset: MIMIC-III
+## 🗃️ Dataset: MIMIC-III
 Source: https://physionet.org/content/mimiciii-demo/1.4/
 
 Description: MIMIC-III is a large, publicly available database comprising de-identified health-related data associated with over forty thousand patients who stayed in critical care units of the Beth Israel Deaconess Medical Center between 2001 and 2012.
 
-⚙️ Setup Instructions:
+## ⚙️ Setup Instructions:
 
 1- Clone the Repository
 ```
@@ -88,7 +88,7 @@ Average Length of Stay by Diagnosis:
   FROM admissions
   GROUP BY diagnosis;
 ```
-🧱 Data Model Overview
+## 🧱 Data Model Overview
 ```
 PATIENTS
 ├── subject_id (PK)
@@ -161,7 +161,8 @@ Execute the Job:
 +--------------------------------------------------------------+
 ```
 
-📄 Documentation
+## 📄 Documentation
 Detailed documentation, including data dictionaries, processing steps, and architectural diagrams, is available in the docs/ directory:
- MIMIC-III Big Data Pipeline documentation.docx
+ [Documentation](https://github.com/yasminabdalla/mimic-bigdata-pipeline/blob/main/MIMIC-III%20Big%20Data%20Pipeline%20documentation.docx)
+
 
