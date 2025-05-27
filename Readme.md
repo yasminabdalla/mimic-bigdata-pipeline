@@ -81,7 +81,7 @@ Average Length of Stay by Diagnosis:
   GROUP BY diagnosis;
 
 🧱 Data Model Overview
-
+```
 PATIENTS
 ├── subject_id (PK)
 ├── gender
@@ -101,6 +101,7 @@ ICUSTAYS
 DIAGNOSES_ICD
 ├── hadm_id (FK → ADMISSIONS.hadm_id)
 └── icd_code
+```
 
 7-Java MapReduce Job (Average Age Calculation)
 cd mapreduce/
